@@ -1,7 +1,8 @@
-﻿import java.io.*
+﻿import java.io.*;
+import java.util.*;
 
 public class Question2{
-	public static void main(String[] args){
+	public static void main(String[] args) throws IOException {
 		txtCopy("Source.txt", "Dest.txt");
 		editFile("Dest.txt");
 		updateFile("Dest.txt");
