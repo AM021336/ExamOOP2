@@ -1,4 +1,4 @@
-ï»¿import java.io.*;
+import java.io.*;
 import java.util.*;
 
 public class Question2{
@@ -8,22 +8,26 @@ public class Question2{
 		updateFile("Dest.txt");
 	}
 
-	public void editFile (String) {
+	public static void editFile (String a) {
 		FileInputStream fs;
 		int z;
 		try{
 			fs = new FileInputStream("Source.txt");	
 			while((z = fs.read()) != -1){	          
-				System.out.print((char) z);    
+				System.out.print((char) z); 
+			}
+		} catch (IOException e){
+			System.out.println(e.toString());
+		}
 	}  
 
-	public void txtCopy (String a,String b) {
+	public static void txtCopy (String a,String b) {
 		FileInputStream fs;
 		int i;
 		try{
 			fs = new FileInputStream("Source.txt");	
-			System.out.println("æª”æ¡ˆçš„å¤§å°ç‚ºï¼š" + fs.available() + " Bytes");
-			System.out.println("æª”æ¡ˆçš„å…§å®¹ç‚ºï¼š");
+			System.out.println("ÀÉ®×ªº¤j¤p¬°¡G" + fs.available() + " Bytes");
+			System.out.println("ÀÉ®×ªº¤º®e¬°¡G");
 			while((i = fs.read()) != -1){	          
 				System.out.print((char) i);      
 			}
